@@ -15,8 +15,9 @@ void setup() {
 
 void draw() {
   //set title and background
-  background(42, 157, 143);
-   surface.setTitle("3x Oscillator " /*+ mouseX + ", " +mouseY*/  );
+  theme();
+  background(themeColor4);
+   surface.setTitle("3x Oscillator " /*+ mouseX + ", " +mouseY */ );
   //call each function
   display();
   press();

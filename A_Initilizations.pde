@@ -168,6 +168,21 @@ boolean over3Down = false;
 //boolean that determines if mouse is over volume slider
 boolean overVol = false;
 
+boolean overUp1 = false;
+boolean overMain1 = false;
+boolean overDown1 = false;
+
+boolean overUp2 = false;
+boolean overMain2 = false;
+boolean overDown2 = false;
+
+boolean overUp3 = false;
+boolean overMain3 = false;
+boolean overDown3 = false;
+
+//boolean that determines if mouse is over theme select button
+boolean overThemeSelect = false;
+
 //color for sine lights
 color sine1Color = color(0, 255, 0);
 color sine2Color = color(0, 255, 0);
@@ -180,6 +195,51 @@ color square3Color = color(50);
 color saw1Color = color(50);
 color saw2Color = color(50);
 color saw3Color = color(50);
+
+//Colors of the different keys
+color C1key = color(255);
+color C1shade = color(150);
+color Dkey = color(255);
+color Dshade = color(150);
+color Ekey = color(255);
+color Eshade = color(150);
+color Fkey = color(255);
+color Fshade = color(150);
+color Gkey = color(255);
+color Gshade = color(150);
+color Akey = color(255);
+color Ashade = color(150);
+color Bkey = color(255);
+color Bshade = color(150);
+color C2key = color(255);
+color C2shade = color(150);
+
+color CsLeft = color(100);
+color DsLeft = color(100);
+color FsLeft = color(100);
+color GsLeft = color(100);
+color AsLeft = color(100);
+
+color CsTop = color(70);
+color DsTop = color(70);
+color FsTop = color(70);
+color GsTop = color(70);
+color AsTop = color(70);
+
+color CsShade = color(0);
+color DsShade = color(0);
+color FsShade = color(0);
+color GsShade = color(0);
+color AsShade = color(0);
+
+
+//Initial theme colors
+color themeColor1 = color(231, 111, 81);
+color themeColor2 = color(244, 162, 97);
+color themeColor3 = color(233, 196, 106);
+color themeColor4 = color(42, 157, 143);
+color themeColor5 = color(22, 137, 123);
+
 
 //initialize fonts 
 PFont numFont;
@@ -238,7 +298,11 @@ int cent2 = 0;
 int cent3 = 0;
 //Slider Y
 int volY = 240;
-//Total sound
+
+//Initial theme is the first one
+int theme = 1;
+
+//Initialize the whole sound
 Sound synth;
 
 //determine if mouse is over a circle button

@@ -48,4 +48,34 @@ void update(int x, int y) {
   } else {
     overVol = false;
   }
+  
+  if (overCircle(55,33.3-20,15)) {
+    overUp1 = true;
+  } else if (overCircle(55,33.3,15)) {
+    overMain1 = true;
+  } else if (overCircle(55,33.3+20,15)) {
+    overDown1 = true;
+  } else if (overCircle(55,99.9-20,15)) {
+    overUp2 = true;
+  } else if (overCircle(55,99.9,15)) {
+    overMain2 = true;
+  } else if (overCircle(55,99.9+20,15)) {
+    overDown2 = true;
+  } else if (overCircle(55,166.5-20,15)) {
+    overUp3 = true;
+  } else if (overCircle(55,166.5,15)) {
+    overMain3 = true;
+  } else if (overCircle(55,166.5+20,15)) {
+    overDown3 = true;
+  } else {
+    overUp1 = overMain1 = overDown1 = false;
+    overUp2 = overMain2 = overDown2 = false;
+    overUp3 = overMain3 = overDown3 = false;
+    
+    if (overCircle(20,250,22)) {
+      overThemeSelect = true;
+    }else {
+      overThemeSelect = false;
+    }
+  }
 }

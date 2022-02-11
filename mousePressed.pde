@@ -14,6 +14,8 @@ void mousePressed() {
       sine1Color = color(0, 255, 0);
       square1Color = color(20);
       saw1Color = color(20);
+      fill(255);
+      
     }
   }
   if (overSine2 == true) {
@@ -120,6 +122,21 @@ void mousePressed() {
       saw3Color = color(0, 255, 0);
       sine3Color = color(20);
       square3Color = color(20);
+    }
+  }
+  
+  //if over theme select button, change the theme
+  if (overThemeSelect == true) {
+    if (theme == 1) {
+      theme = 2;
+    } else if (theme == 2) {
+      theme = 3;
+    } else if (theme == 3) {
+      theme = 4;
+    } else if (theme == 4) {
+      theme = 5;
+    } else if (theme == 5) {
+      theme = 1;
     }
   }
 }

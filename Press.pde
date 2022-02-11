@@ -1,10 +1,13 @@
 /*
 for each key, and for each different osc, play 
-the osc at a certain frequency, else stop playing
-*/
+ the osc at a certain frequency and change color, 
+ else stop playing and revert color
+ */
 void press() {
   if (keyPressed) {
     if (key == 'z') {
+      C1key = color(255, 170, 0);
+      C1shade = color(190, 125, 0);
       if (Sine1 == true) {
         sinC11.play();
         sinC11.freq(C1hz1);
@@ -44,6 +47,8 @@ void press() {
         sawC13.freq(C1hz3);
       }
     } else if (key == 'x') {
+      Dkey = color(255, 170, 0);
+      Dshade = color(190, 125, 0);
       if (Sine1 == true) {
         sinD1.play();
         sinD1.freq(Dhz1);
@@ -83,6 +88,8 @@ void press() {
         sawD3.freq(Dhz3);
       }
     } else if (key == 'c') {
+      Ekey = color(255, 170, 0);
+      Eshade = color(190, 125, 0);
       if (Sine1 == true) {
         sinE1.play();
         sinE1.freq(Ehz1);
@@ -122,6 +129,8 @@ void press() {
         sawE3.freq(Ehz3);
       }
     } else if (key == 'v') {
+      Fkey = color(255, 170, 0);
+      Fshade = color(190, 125, 0);
       if (Sine1 == true) {
         sinF1.play();
         sinF1.freq(Fhz1);
@@ -161,6 +170,8 @@ void press() {
         sawF3.freq(Fhz3);
       }
     } else if (key == 'b') {
+      Gkey = color(255, 170, 0);
+      Gshade = color(190, 125, 0);
       if (Sine1 == true) {
         sinG1.play();
         sinG1.freq(Ghz1);
@@ -200,6 +211,8 @@ void press() {
         sawG3.freq(Ghz3);
       }
     } else if (key == 'n') {
+      Akey = color(255, 170, 0);
+      Ashade = color(190, 125, 0);
       if (Sine1 == true) {
         sinA1.play();
         sinA1.freq(Ahz1);
@@ -239,6 +252,8 @@ void press() {
         sawA3.freq(Ahz3);
       }
     } else if (key == 'm') {
+      Bkey = color(255, 170, 0);
+      Bshade = color(190, 125, 0);
       if (Sine1 == true) {
         sinB1.play();
         sinB1.freq(Bhz1);
@@ -278,6 +293,8 @@ void press() {
         sawB3.freq(Bhz3);
       }
     } else if (key == ',') {
+      C2key = color(255, 170, 0);
+      C2shade = color(190, 125, 0);
       if (Sine1 == true) {
         sinC21.play();
         sinC21.freq(C2hz1);
@@ -317,6 +334,9 @@ void press() {
         sawC23.freq(C2hz3);
       }
     } else if (key == 's') {
+      CsTop = color(180, 120, 0);
+      CsLeft = color(220, 145, 0);
+      CsShade = color(160, 100, 0);
       if (Sine1 == true) {
         sinCs1.play();
         sinCs1.freq(Cshz1);
@@ -356,6 +376,9 @@ void press() {
         sawCs3.freq(Cshz3);
       }
     } else if (key == 'd') {
+      DsTop = color(180, 120, 0);
+      DsLeft = color(220, 145, 0);
+      DsShade = color(160, 100, 0);
       if (Sine1 == true) {
         sinDs1.play();
         sinDs1.freq(Dshz1);
@@ -395,6 +418,9 @@ void press() {
         sawDs3.freq(Dshz3);
       }
     } else if (key == 'g') {
+      FsTop = color(180, 120, 0);
+      FsLeft = color(220, 145, 0);
+      FsShade = color(160, 100, 0);
       if (Sine1 == true) {
         sinFs1.play();
         sinFs1.freq(Fshz1);
@@ -434,6 +460,9 @@ void press() {
         sawFs3.freq(Fshz3);
       }
     } else if (key == 'h') {
+      GsTop = color(180, 120, 0);
+      GsLeft = color(220, 145, 0);
+      GsShade = color(160, 100, 0);
       if (Sine1 == true) {
         sinGs1.play();
         sinGs1.freq(Gshz1);
@@ -473,6 +502,9 @@ void press() {
         sawGs3.freq(Gshz3);
       }
     } else if (key == 'j') {
+      AsTop = color(180, 120, 0);
+      AsLeft = color(220, 145, 0);
+      AsShade = color(160, 100, 0);
       if (Sine1 == true) {
         sinAs1.play();
         sinAs1.freq(Ashz1);
@@ -513,6 +545,42 @@ void press() {
       }
     }
   } else {
+    C1key = color(255);
+    C1shade = color(150);
+    Dkey = color(255);
+    Dshade = color(150);
+    Ekey = color(255);
+    Eshade = color(150);
+    Fkey = color(255);
+    Fshade = color(150);
+    Gkey = color(255);
+    Gshade = color(150);
+    Akey = color(255);
+    Ashade = color(150);
+    Bkey = color(255);
+    Bshade = color(150);
+    C2key = color(255);
+    C2shade = color(150);
+
+    CsLeft = color(100);
+    DsLeft = color(100);
+    FsLeft = color(100);
+    GsLeft = color(100);
+    AsLeft = color(100);
+
+    CsTop = color(70);
+    DsTop = color(70);
+    FsTop = color(70);
+    GsTop = color(70);
+    AsTop = color(70);
+
+    CsShade = color(0);
+    DsShade = color(0);
+    FsShade = color(0);
+    GsShade = color(0);
+    AsShade = color(0);
+
+
     sinC11.stop();
     sinC12.stop();
     sinC13.stop();
